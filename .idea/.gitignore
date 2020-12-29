@@ -1,0 +1,5 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.idea
+reporting_app/*/migrations/*

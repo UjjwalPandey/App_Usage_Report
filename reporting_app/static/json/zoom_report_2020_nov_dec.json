@@ -1,0 +1,417 @@
+{
+  "year": 2020,
+  "month": 12,
+  "dates": [
+    {
+      "date": "2020-11-01",
+      "new_users": 3,
+      "meetings": 10,
+      "participants": 20,
+      "meeting_minutes": 100
+    },
+    {
+      "date": "2020-11-02",
+      "new_users": 0,
+      "meetings": 20,
+      "participants": 80,
+      "meeting_minutes": 200
+    },
+    {
+      "date": "2020-11-03",
+      "new_users": 10,
+      "meetings": 35,
+      "participants": 100,
+      "meeting_minutes": 380
+    },{
+      "date": "2020-11-04",
+      "new_users": 15,
+      "meetings": 18,
+      "participants": 35,
+      "meeting_minutes": 170
+    },
+    {
+      "date": "2020-11-05",
+      "new_users": 4,
+      "meetings": 40,
+      "participants": 250,
+      "meeting_minutes": 300
+    },
+    {
+      "date": "2020-11-06",
+      "new_users": 30,
+      "meetings": 15,
+      "participants": 400,
+      "meeting_minutes": 600
+    },{
+      "date": "2020-11-07",
+      "new_users": 7,
+      "meetings": 13,
+      "participants": 22,
+      "meeting_minutes": 250
+    },
+    {
+      "date": "2020-11-08",
+      "new_users": 7,
+      "meetings": 15,
+      "participants": 10,
+      "meeting_minutes": 120
+    },
+    {
+      "date": "2020-11-09",
+      "new_users": 0,
+      "meetings": 5,
+      "participants": 30,
+      "meeting_minutes": 60
+    },{
+      "date": "2020-11-10",
+      "new_users": 6,
+      "meetings": 15,
+      "participants": 70,
+      "meeting_minutes": 362
+    },
+    {
+      "date": "2020-11-11",
+      "new_users": 4,
+      "meetings": 2,
+      "participants": 8,
+      "meeting_minutes": 180
+    },
+    {
+      "date": "2020-11-12",
+      "new_users": 1,
+      "meetings": 3,
+      "participants": 10,
+      "meeting_minutes": 38
+    },{
+      "date": "2020-11-13",
+      "new_users": 18,
+      "meetings": 16,
+      "participants": 178,
+      "meeting_minutes": 230
+    },
+    {
+      "date": "2020-11-14",
+      "new_users": 2,
+      "meetings": 8,
+      "participants": 80,
+      "meeting_minutes": 112
+    },
+    {
+      "date": "2020-11-15",
+      "new_users": 0,
+      "meetings": 5,
+      "participants": 30,
+      "meeting_minutes": 60
+    },
+    {
+      "date": "2020-11-16",
+      "new_users": 23,
+      "meetings": 10,
+      "participants": 150,
+      "meeting_minutes": 302
+    },
+    {
+      "date": "2020-11-17",
+      "new_users": 0,
+      "meetings": 1,
+      "participants": 15,
+      "meeting_minutes": 60
+    },
+    {
+      "date": "2020-11-18",
+      "new_users": 12,
+      "meetings": 35,
+      "participants": 156,
+      "meeting_minutes": 278
+    },{
+      "date": "2020-11-19",
+      "new_users": 7,
+      "meetings": 12,
+      "participants": 27,
+      "meeting_minutes": 198
+    },
+    {
+      "date": "2020-11-20",
+      "new_users": 16,
+      "meetings": 22,
+      "participants": 87,
+      "meeting_minutes": 376
+    },
+    {
+      "date": "2020-11-21",
+      "new_users": 11,
+      "meetings": 12,
+      "participants": 145,
+      "meeting_minutes": 256
+    },{
+      "date": "2020-11-22",
+      "new_users": 3,
+      "meetings": 10,
+      "participants": 20,
+      "meeting_minutes": 100
+    },
+    {
+      "date": "2020-11-23",
+      "new_users": 7,
+      "meetings": 12,
+      "participants": 34,
+      "meeting_minutes": 123
+    },
+    {
+      "date": "2020-11-24",
+      "new_users": 10,
+      "meetings": 35,
+      "participants": 100,
+      "meeting_minutes": 380
+    },{
+      "date": "2020-11-25",
+      "new_users": 3,
+      "meetings": 10,
+      "participants": 20,
+      "meeting_minutes": 100
+    },
+    {
+      "date": "2020-11-26",
+      "new_users": 0,
+      "meetings": 20,
+      "participants": 80,
+      "meeting_minutes": 200
+    },
+    {
+      "date": "2020-11-27",
+      "new_users": 10,
+      "meetings": 25,
+      "participants": 100,
+      "meeting_minutes": 123
+    },{
+      "date": "2020-11-28",
+      "new_users": 16,
+      "meetings": 15,
+      "participants": 22,
+      "meeting_minutes": 92
+    },
+    {
+      "date": "2020-11-29",
+      "new_users": 0,
+      "meetings": 20,
+      "participants": 80,
+      "meeting_minutes": 200
+    },
+    {
+      "date": "2020-11-30",
+      "new_users": 9,
+      "meetings": 15,
+      "participants": 30,
+      "meeting_minutes": 210
+    },
+    {
+      "date": "2020-12-01",
+      "new_users": 3,
+      "meetings": 10,
+      "participants": 20,
+      "meeting_minutes": 100
+    },
+    {
+      "date": "2020-12-02",
+      "new_users": 0,
+      "meetings": 20,
+      "participants": 80,
+      "meeting_minutes": 200
+    },
+    {
+      "date": "2020-12-03",
+      "new_users": 10,
+      "meetings": 35,
+      "participants": 100,
+      "meeting_minutes": 380
+    },{
+      "date": "2020-12-04",
+      "new_users": 15,
+      "meetings": 18,
+      "participants": 35,
+      "meeting_minutes": 170
+    },
+    {
+      "date": "2020-12-05",
+      "new_users": 4,
+      "meetings": 40,
+      "participants": 250,
+      "meeting_minutes": 300
+    },
+    {
+      "date": "2020-12-06",
+      "new_users": 30,
+      "meetings": 15,
+      "participants": 400,
+      "meeting_minutes": 600
+    },{
+      "date": "2020-12-07",
+      "new_users": 7,
+      "meetings": 13,
+      "participants": 22,
+      "meeting_minutes": 250
+    },
+    {
+      "date": "2020-12-08",
+      "new_users": 7,
+      "meetings": 15,
+      "participants": 10,
+      "meeting_minutes": 120
+    },
+    {
+      "date": "2020-12-09",
+      "new_users": 0,
+      "meetings": 5,
+      "participants": 30,
+      "meeting_minutes": 60
+    },{
+      "date": "2020-12-10",
+      "new_users": 6,
+      "meetings": 15,
+      "participants": 70,
+      "meeting_minutes": 362
+    },
+    {
+      "date": "2020-12-11",
+      "new_users": 4,
+      "meetings": 2,
+      "participants": 8,
+      "meeting_minutes": 180
+    },
+    {
+      "date": "2020-12-12",
+      "new_users": 1,
+      "meetings": 3,
+      "participants": 10,
+      "meeting_minutes": 38
+    },{
+      "date": "2020-12-13",
+      "new_users": 18,
+      "meetings": 16,
+      "participants": 178,
+      "meeting_minutes": 230
+    },
+    {
+      "date": "2020-12-14",
+      "new_users": 2,
+      "meetings": 8,
+      "participants": 80,
+      "meeting_minutes": 112
+    },
+    {
+      "date": "2020-12-15",
+      "new_users": 0,
+      "meetings": 5,
+      "participants": 30,
+      "meeting_minutes": 60
+    },
+    {
+      "date": "2020-12-16",
+      "new_users": 23,
+      "meetings": 10,
+      "participants": 150,
+      "meeting_minutes": 302
+    },
+    {
+      "date": "2020-12-17",
+      "new_users": 0,
+      "meetings": 1,
+      "participants": 15,
+      "meeting_minutes": 60
+    },
+    {
+      "date": "2020-12-18",
+      "new_users": 12,
+      "meetings": 35,
+      "participants": 156,
+      "meeting_minutes": 278
+    },{
+      "date": "2020-12-19",
+      "new_users": 7,
+      "meetings": 12,
+      "participants": 27,
+      "meeting_minutes": 198
+    },
+    {
+      "date": "2020-12-20",
+      "new_users": 16,
+      "meetings": 22,
+      "participants": 87,
+      "meeting_minutes": 376
+    },
+    {
+      "date": "2020-12-21",
+      "new_users": 11,
+      "meetings": 12,
+      "participants": 145,
+      "meeting_minutes": 256
+    },{
+      "date": "2020-12-22",
+      "new_users": 3,
+      "meetings": 10,
+      "participants": 20,
+      "meeting_minutes": 100
+    },
+    {
+      "date": "2020-12-23",
+      "new_users": 7,
+      "meetings": 12,
+      "participants": 34,
+      "meeting_minutes": 123
+    },
+    {
+      "date": "2020-12-24",
+      "new_users": 10,
+      "meetings": 35,
+      "participants": 100,
+      "meeting_minutes": 380
+    },{
+      "date": "2020-12-25",
+      "new_users": 3,
+      "meetings": 10,
+      "participants": 20,
+      "meeting_minutes": 100
+    },
+    {
+      "date": "2020-12-26",
+      "new_users": 0,
+      "meetings": 20,
+      "participants": 80,
+      "meeting_minutes": 200
+    },
+    {
+      "date": "2020-12-27",
+      "new_users": 10,
+      "meetings": 25,
+      "participants": 100,
+      "meeting_minutes": 123
+    },{
+      "date": "2020-12-28",
+      "new_users": 16,
+      "meetings": 15,
+      "participants": 22,
+      "meeting_minutes": 92
+    },
+    {
+      "date": "2020-12-29",
+      "new_users": 0,
+      "meetings": 20,
+      "participants": 80,
+      "meeting_minutes": 200
+    },
+    {
+      "date": "2020-12-30",
+      "new_users": 9,
+      "meetings": 15,
+      "participants": 30,
+      "meeting_minutes": 210
+    },
+    {
+      "date": "2020-12-31",
+      "new_users": 2,
+      "meetings": 12,
+      "participants": 67,
+      "meeting_minutes": 78
+    }
+  ]
+}
