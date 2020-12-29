@@ -3,6 +3,9 @@ import os
 from datetime import timedelta, datetime
 from celery import shared_task
 from django.utils import timezone
+from rest_framework import status
+from rest_framework.response import Response
+
 from .models import Report
 
 
@@ -18,8 +21,10 @@ def extractData():
     # data = json.loads(response.text)
 
     """ As demo paid accounts was not available,thus mocked up a few records looking at the API schema into JSON """
-
-    json_data = open(os.getenv(api_client + "_REPORT_JSON"))
+    try:
+        json_data = open(os.getenv(api_client + "_REPORT_JSON"))
+    except FileNotFoundError:
+        return None
     api_response = json.load(json_data)
     json_data.close()
     return api_response['dates']
@@ -32,6 +37,8 @@ def updateRecordService(window_end=None):
     print("Update Service running!")
     if os.getenv("DEFAULT_EXTRACT_DATA", True):
         response_data = extractData()
+        if not response_data:
+            return False
     else:
         response_data = []
 
@@ -42,7 +49,7 @@ def updateRecordService(window_end=None):
                                               date__lte=window_end).order_by('-date')
         if usage_records.count() == int(os.getenv("DAYS_OF_USAGE")):
             print("Already up to date")
-            return
+            return True
         window_start = window_end - timedelta(days=int(os.getenv("DAYS_OF_USAGE")))
 
         data_list = []
@@ -57,3 +64,5 @@ def updateRecordService(window_end=None):
         print("Records Updated!")
     except Report.DoesNotExist:
         print('Report Record does not exist!')
+
+    return True

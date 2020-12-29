@@ -25,14 +25,19 @@ class ReportViewSet(viewsets.ModelViewSet):
                                 status=status.HTTP_400_BAD_REQUEST)
         else:
             window_end = timezone.now().date()
-        updateRecordService(window_end)
+        updated = updateRecordService(window_end)
+
+        if not updated:
+            return Response(data={"message": "Error: File Not Found"}, status=status.HTTP_400_BAD_REQUEST)
 
         window_start = window_end - timedelta(days=int(os.getenv("DAYS_OF_USAGE")))
+
         usage_avg = Report.objects.filter(date__gte=window_start, date__lte=window_end).\
             aggregate(Avg('new_users'), Avg('meetings'), Avg('participants'), Avg('meeting_minutes'))
 
         usage_sum = Report.objects.filter(date__gte=window_start, date__lte=window_end).\
             aggregate(Sum('new_users'), Sum('meetings'), Sum('participants'), Sum('meeting_minutes'))
+
         data = {
             "Start Date": window_start,
             "End Date": window_end,
