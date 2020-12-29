@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from .models import Zoom
+from .models import Report
 
 
 class ZoomSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Zoom
+        model = Report
         fields = ('date', 'new_users', 'meetings', 'participants', 'meeting_minutes', )

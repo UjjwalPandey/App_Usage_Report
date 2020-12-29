@@ -3,10 +3,10 @@ from rest_framework import routers
 
 from . import views
 
-app_name = "zoom"
+app_name = "report"
 
 router = routers.DefaultRouter()
-router.register(r'zoom', views.ZoomViewSet, basename="zoom")
+router.register(r'report', views.ReportViewSet, basename="report")
 
 urlpatterns = [
     url(r'^', include(router.urls)),

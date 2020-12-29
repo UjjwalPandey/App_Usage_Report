@@ -21,6 +21,6 @@ from django.views.generic import TemplateView
 urlpatterns = [
 
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    url(r"^report/", include("zoom.urls", namespace="zoom"),),
+    url(r"^report/", include("report.urls", namespace="report"),),
     path('admin/', admin.site.urls),
 ]

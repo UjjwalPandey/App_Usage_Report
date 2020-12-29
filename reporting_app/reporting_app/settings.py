@@ -21,7 +21,7 @@ load_dotenv()
 ROOT_DIR = (
     environ.Path(__file__) - 3
 )
-APPS_DIR = ROOT_DIR.path("zoom")
+APPS_DIR = ROOT_DIR.path("report")
 
 env = environ.Env()
 
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'zoom',
+    'report',
     'django_celery_beat',
 ]
 

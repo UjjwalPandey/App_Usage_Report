@@ -6,13 +6,13 @@ from django.utils import timezone
 from rest_framework import viewsets, status
 from rest_framework.response import Response
 
-from .models import Zoom
+from .models import Report
 from .serializers import ZoomSerializer
 from .tasks import updateRecordService
 
 
-class ZoomViewSet(viewsets.ModelViewSet):
-    queryset = Zoom.objects.all()
+class ReportViewSet(viewsets.ModelViewSet):
+    queryset = Report.objects.all()
     serializer_class = ZoomSerializer
 
     def list(self, request, *args, **kwargs):
@@ -28,10 +28,10 @@ class ZoomViewSet(viewsets.ModelViewSet):
         updateRecordService(window_end)
 
         window_start = window_end - timedelta(days=int(os.getenv("DAYS_OF_USAGE")))
-        usage_avg = Zoom.objects.filter(date__gte=window_start, date__lte=window_end).\
+        usage_avg = Report.objects.filter(date__gte=window_start, date__lte=window_end).\
             aggregate(Avg('new_users'), Avg('meetings'), Avg('participants'), Avg('meeting_minutes'))
 
-        usage_sum = Zoom.objects.filter(date__gte=window_start, date__lte=window_end).\
+        usage_sum = Report.objects.filter(date__gte=window_start, date__lte=window_end).\
             aggregate(Sum('new_users'), Sum('meetings'), Sum('participants'), Sum('meeting_minutes'))
         data = {
             "Start Date": window_start,
@@ -41,7 +41,7 @@ class ZoomViewSet(viewsets.ModelViewSet):
         }
         days = {"Sunday": 1, "Monday": 2, "Tuesday": 3, "Wednesday": 4, "Thursday": 5, "Friday": 6, "Saturday": 7}
         for day in days:
-            day_avg = Zoom.objects.filter(date__gt=window_start, date__lte=window_end).filter(date__week_day=days[day]).\
+            day_avg = Report.objects.filter(date__gt=window_start, date__lte=window_end).filter(date__week_day=days[day]).\
                 aggregate(Avg('new_users'), Avg('meetings'), Avg('participants'), Avg('meeting_minutes'))
             data[day] = day_avg
 

@@ -1,8 +1,8 @@
 from django.apps import AppConfig
 
 
-class ZoomConfig(AppConfig):
-    name = 'zoom'
+class ReportConfig(AppConfig):
+    name = 'report'
 
     def ready(self):
         """Override this to put in:
