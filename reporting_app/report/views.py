@@ -6,7 +6,7 @@ from django.utils import timezone
 from rest_framework import viewsets, status
 from rest_framework.response import Response
 
-from .models import Report
+from .models import Report, AppName
 from .serializers import ZoomSerializer
 from .tasks import updateRecordService
 
@@ -17,6 +17,8 @@ class ReportViewSet(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         input_date = self.request.query_params.get('date', None)
+        api_client = os.getenv("API_CLIENT", "ZOOM")
+        queryset = self.get_queryset().filter(type=AppName[api_client])
         if input_date:
             try:
                 window_end = datetime.strptime(input_date, '%Y-%m-%d').date()
@@ -32,10 +34,10 @@ class ReportViewSet(viewsets.ModelViewSet):
 
         window_start = window_end - timedelta(days=int(os.getenv("DAYS_OF_USAGE")))
 
-        usage_avg = Report.objects.filter(date__gte=window_start, date__lte=window_end).\
+        usage_avg = queryset.filter(date__gte=window_start, date__lte=window_end).\
             aggregate(Avg('new_users'), Avg('meetings'), Avg('participants'), Avg('meeting_minutes'))
 
-        usage_sum = Report.objects.filter(date__gte=window_start, date__lte=window_end).\
+        usage_sum = queryset.filter(date__gte=window_start, date__lte=window_end).\
             aggregate(Sum('new_users'), Sum('meetings'), Sum('participants'), Sum('meeting_minutes'))
 
         data = {
@@ -46,7 +48,7 @@ class ReportViewSet(viewsets.ModelViewSet):
         }
         days = {"Sunday": 1, "Monday": 2, "Tuesday": 3, "Wednesday": 4, "Thursday": 5, "Friday": 6, "Saturday": 7}
         for day in days:
-            day_avg = Report.objects.filter(date__gt=window_start, date__lte=window_end).filter(date__week_day=days[day]).\
+            day_avg = queryset.filter(date__gt=window_start, date__lte=window_end).filter(date__week_day=days[day]).\
                 aggregate(Avg('new_users'), Avg('meetings'), Avg('participants'), Avg('meeting_minutes'))
             data[day] = day_avg
 
