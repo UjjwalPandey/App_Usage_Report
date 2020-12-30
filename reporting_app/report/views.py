@@ -25,10 +25,10 @@ class ReportViewSet(viewsets.ModelViewSet):
                                 status=status.HTTP_400_BAD_REQUEST)
         else:
             window_end = timezone.now().date()
-        updated = updateRecordService(window_end)
+        updated, error_message = updateRecordService(window_end)
 
         if not updated:
-            return Response(data={"message": "Error: File Not Found"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(data={"message": error_message}, status=status.HTTP_400_BAD_REQUEST)
 
         window_start = window_end - timedelta(days=int(os.getenv("DAYS_OF_USAGE")))
 
